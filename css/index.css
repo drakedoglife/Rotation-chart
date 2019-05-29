@@ -1,0 +1,29 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	width: 1200px;
+	background: #FFF;
+	font-family: "Microsoft YaHei";
+}
+/*主体部分*/
+.main {
+	width: 1200px;
+	height: 600px;
+	position: relative;
+}
+.main:hover {
+	cursor: pointer;
+}
+/*导航条*/
+#list {
+	width: 1200px;
+}
+
+#list li {
+	width: 25%;
+	float: left;
+	height: 30px;
+	list-style: none;
+}
