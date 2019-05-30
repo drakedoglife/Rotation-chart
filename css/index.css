@@ -23,7 +23,7 @@ body {
 /*导航条*/
 #list {
 	width: 1200px;
-	height: 30px;
+	height: 50px;
 	/*border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-color: #666;*/
@@ -32,7 +32,7 @@ body {
 #list li {
 	width: 25%;
 	float: left;
-	height: 30px;
+	height: 50px;
 	list-style: none;
 	background: #FFF;
 	color: #666;
@@ -40,6 +40,6 @@ body {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-color: #666;
-}
+}	
 
 
