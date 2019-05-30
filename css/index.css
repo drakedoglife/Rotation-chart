@@ -6,12 +6,16 @@ body {
 	width: 1200px;
 	background: #FFF;
 	font-family: "Microsoft YaHei";
+	margin: 0 auto;
 }
 /*主体部分*/
 .main {
 	width: 1200px;
 	height: 600px;
 	position: relative;
+	margin-top: 50px;
+	border: 1px solid #666;
+	border-radius: 10px;
 }
 .main:hover {
 	cursor: pointer;
@@ -19,6 +23,10 @@ body {
 /*导航条*/
 #list {
 	width: 1200px;
+	height: 30px;
+	/*border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-color: #666;*/
 }
 
 #list li {
@@ -26,4 +34,12 @@ body {
 	float: left;
 	height: 30px;
 	list-style: none;
+	background: #FFF;
+	color: #666;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-color: #666;
 }
+
+
