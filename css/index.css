@@ -39,12 +39,14 @@ body {
 	font-size: 22px;
 	line-height: 50px;
 }
+#list li:nth-child(1) {
+	background-color: #FFCC00;
+}
 /*轮播图*/
 .image {
 	width: 1200px;
 	height: 450px;
 	background-repeat: no-repeat;
-	display: none;
 }
 
 .img1 {

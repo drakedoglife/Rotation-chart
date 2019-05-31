@@ -43,27 +43,68 @@ window.onload = function() {
 		}
 	}
 	// 获取目标元素
+	var main = document.querySelector(".main");
 	var ul = document.querySelector("#list");
 	var li = document.querySelectorAll("li");
 	var image = document.querySelectorAll(".image");
-	// 轮播图脚本
+	var size = image.length;
+	var index = 0;
+	var timer = null;
+	// 切换图片
 	function rotationChart() {
-		var i;
-		for(i=0; i<4; i++) {
-			li[i].style.backgroundColor = "#FFCC00";
-			image[i].style.display = "block";
-			if (li[i-1] || image[i-1]) {
-				li[i-1].style.backgroundColor = "#FFF";
-				image[i-1].style.display = "none";
+		for(var i=0; i<li.length; i++) {
+			li[i].style.backgroundColor = "#FFF";
+			image[i].style.display = "none";
 			}
-		}
-		if (i === 3) {
-			i = 0;
-		}
-		// var timer = setInterval("rotationChart()", 1000);
+		li[index].style.backgroundColor = "#FFCC00";
+		image[index].style.display = "block";
 	}
-	// 选项卡脚本
-	// EventUntil.addHandler(ul, "click", function(e) {
-
-	// })
+	// 自动播放
+	function startAutoPlay() {
+		timer = setInterval(function() {
+			index++;
+			if (index >= size) {
+				index = 0;
+			}
+			rotationChart();
+		}, 1000);
+	}
+	// 停止自动播放
+	function stopAutoPlay() {
+		if (timer) {
+			clearInterval(timer);
+		}
+	}
+	// 添加鼠标点击事件
+	for (var i=0; i<li.length; i++) {
+		li[i].id = i;
+		EventUntil.addHandler(li[i], "click", function() {
+			index = this.id;
+			rotationChart();
+		})
+	}
+	// 添加鼠标移动事件
+	EventUntil.addHandler(main, "mouseover", stopAutoPlay);
+	EventUntil.addHandler(main, "mouseout", startAutoPlay);
+	// 开始自动播放
+	startAutoPlay();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
