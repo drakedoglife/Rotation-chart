@@ -54,9 +54,11 @@ window.onload = function() {
 	function rotationChart() {
 		for(var i=0; i<li.length; i++) {
 			li[i].style.backgroundColor = "#FFF";
+			li[i].style.fontWeight = "normal";
 			image[i].style.display = "none";
 			}
 		li[index].style.backgroundColor = "#FFCC00";
+		li[index].style.fontWeight = "bold";
 		image[index].style.display = "block";
 	}
 	// 自动播放
